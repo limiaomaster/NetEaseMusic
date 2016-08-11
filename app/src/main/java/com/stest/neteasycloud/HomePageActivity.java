@@ -232,15 +232,23 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-
+    //  下面是点击返回按键后的处理方式：
+    //  如果导航栏有打开就把它关闭，没有打开就按默认的方法走，就是结束程序。
+    /*@Override
+    public void onBackPressed() {
+        if(mDrawerLayout.isDrawerOpen(GravityCompat.START)){
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        }else
+        super.onBackPressed();
+    }*/
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && isOpen ) {
             mDrawerLayout.closeDrawer(mNavigationView);
             isOpen = false;
-        }
-        //return super.onKeyDown(keyCode, event);
-        return  true;
+        }else
+            return super.onKeyDown(keyCode, event);
+      return true;
     }
 }
