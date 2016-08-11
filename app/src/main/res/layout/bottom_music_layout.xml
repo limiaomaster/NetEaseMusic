@@ -30,6 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="60"
+                android:gravity="center"
                 android:text="思念是一种病"
                 android:textColor="#000000"
                 android:textSize="15sp" />

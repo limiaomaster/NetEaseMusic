@@ -31,6 +31,7 @@ public class DiscoFragment extends Fragment {
     private TabLayout main_tab;
     @ViewInject(R.id.disco_viewPager)
     private ViewPager main_viewpager;
+
     private List<String> mTitleList = new ArrayList<>(4);
     private List<Fragment> fragments = new ArrayList<>(4);
     private String[] title = new String[]{"个性推荐", "歌单", "主播电台", "排行榜"};

@@ -24,7 +24,7 @@
         android:textSize="15sp"
         android:textColor="@color/themeColor"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:text="刷新完成"/>
 
     <com.stest.view.NetEasyRefreshLayout

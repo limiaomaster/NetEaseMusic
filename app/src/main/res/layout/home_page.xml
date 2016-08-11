@@ -44,7 +44,7 @@
                     android:layout_width="55dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="50dp"
-                    android:layout_toLeftOf="@+id/bar_music"
+                    android:layout_toStartOf="@+id/bar_music"
                     android:background="@drawable/actionbar_disco"
                     android:clickable="true" />
 
@@ -74,14 +74,15 @@
                     android:paddingRight="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:background="@drawable/search_select"
-                    >
+                    android:background="@drawable/search_select">
+
                     <ImageView
                         android:id="@+id/bar_search"
                         android:layout_width="25dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/actionbar_search" />
                 </LinearLayout>
+
             </RelativeLayout>
         </android.support.v7.widget.Toolbar>
 
@@ -93,6 +94,8 @@
         </android.support.v4.view.ViewPager>
 
     </LinearLayout>
+
+
     <!--底部唱片布局-->
     <include layout="@layout/bottom_music_layout"></include>
 
@@ -103,14 +106,13 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/navigation_drawer_header"
         app:menu="@menu/navigation_drawer_menu">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <!--app:itemIconTint="@color/blue" 设置菜单图标颜色-->
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
                 android:layout_alignParentBottom="true"
                 android:background="#ffffff">
 
@@ -123,11 +125,10 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:layout_width="1.0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_marginBottom="14.0dip"
-                    android:layout_marginTop="14.0dip"
-                    android:background="#fff1f1f1" />
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                     />
 
                 <Button
                     android:layout_width="0dp"
@@ -137,7 +138,7 @@
                     android:text="退出应用"
                     android:textSize="16sp" />
             </LinearLayout>
-        </RelativeLayout>
+
     </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
